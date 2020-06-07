@@ -1,9 +1,10 @@
 class BlogsController < ApplicationController
-  def index
-  	@blogs = Blog.all
+  def show
   end
 
-  def show
+
+  def index
+  	@blogs = Blog.all
   end
 
   def new
@@ -20,7 +21,7 @@ class BlogsController < ApplicationController
   end
 
   private
-  def bolg_params
+  def blog_params
   	params.require(:blog).permit(:title, :category, :body)
   end
 end
